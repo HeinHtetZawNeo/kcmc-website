@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .hero {
-            background: url('https://images.unsplash.com/photo-1533066643161-3a4f3179b2c4?auto=format&fit=crop&w=1650&q=80') center center/cover no-repeat;
+            background: url('rsc/img1.jpg') center center/cover no-repeat;
             color: white;
             height: 100vh;
             display: flex;
@@ -59,7 +59,17 @@
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Language
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item lang-select" href="#" data-language="en">English</a></li>
+                        <li><a class="dropdown-item lang-select" href="#" data-language="mm">မြန်မာ</a></li>
+                    </ul>
+                </li>
             </ul>
+
         </div>
     </div>
 </nav>
@@ -67,7 +77,10 @@
 <!-- Hero -->
 <section class="hero text-center">
     <div class="container">
-        <h1>Welcome to KCMC Church</h1>
+        <h1>
+            <span data-lang="en">Welcome to KCMC Church</span>
+            <span data-lang="mm" class="d-none">ကေစီအမ်စီ ခရစ်ယာန်ဘုရားရှိခိုးကျောင်းမှ ကြိုဆိုပါတယ်</span>
+        </h1>
         <p class="lead">Worship, Fellowship & Community</p>
         <a href="#about" class="btn btn-outline-light mt-4 btn-lg">Learn More</a>
     </div>
@@ -103,7 +116,7 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 shadow">
-                    <img src="https://source.unsplash.com/400x250/?bible,church" class="card-img-top" alt="Sunday Worship">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7lmp4LS59J9Dkl7QsKWUBg.jpeg" class="card-img-top" alt="Sunday Worship">
                     <div class="card-body">
                         <h5 class="card-title">Sunday Worship</h5>
                         <p class="card-text">Every Sunday at 10:00 AM</p>
@@ -112,7 +125,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card h-100 shadow">
-                    <img src="https://source.unsplash.com/400x250/?prayer,faith" class="card-img-top" alt="Prayer Meeting">
+                    <img src="https://eastridge.ca/wp-content/uploads/2024/09/Prayer.jpg" class="card-img-top" alt="Prayer Meeting">
                     <div class="card-body">
                         <h5 class="card-title">Prayer Meeting</h5>
                         <p class="card-text">Wednesday Evenings at 7:00 PM</p>
@@ -121,7 +134,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card h-100 shadow">
-                    <img src="https://source.unsplash.com/400x250/?community,church" class="card-img-top" alt="Youth Fellowship">
+                    <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/i7/07098688-3627-48b8-b523-06d63eff101e" class="card-img-top" alt="Youth Fellowship">
                     <div class="card-body">
                         <h5 class="card-title">Youth Fellowship</h5>
                         <p class="card-text">Saturday at 5:00 PM</p>
@@ -135,16 +148,53 @@
 <!-- Gallery -->
 <section id="gallery" class="container py-5 text-center">
     <h2 class="section-title">Gallery</h2>
-    <div class="row g-3 gallery">
-        <div class="col-6 col-md-4">
-            <img src="https://source.unsplash.com/800x600/?church,service" class="img-fluid rounded shadow" alt="Church Event">
+
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
-        <div class="col-6 col-md-4">
-            <img src="https://source.unsplash.com/800x600/?people,worship" class="img-fluid rounded shadow" alt="Worship">
+
+        <!-- Carousel Inner -->
+        <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <img src="rsc/img-slider1.jpg" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <img src="rsc/img-slider2.jpg" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="col-6 col-md-4 d-none d-md-block">
+                        <img src="rsc/img-slider3.jpg" class="d-block w-100" alt="Image 3">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <img src="rsc/img-slider4.jpg" class="d-block w-100" alt="Image 4">
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <img src="rsc/img-slider5.jpg" class="d-block w-100" alt="Image 5">
+                    </div>
+                    <div class="col-6 col-md-4 d-none d-md-block">
+                        <img src="rsc/img-slider6.jpg" class="d-block w-100" alt="Image 6">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6 col-md-4">
-            <img src="https://source.unsplash.com/800x600/?choir,singing" class="img-fluid rounded shadow" alt="Choir">
-        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </section>
 
@@ -158,5 +208,20 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelectorAll('.lang-select').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const selectedLang = this.dataset.language;
+
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.classList.add('d-none'); // Hide all
+                if (el.dataset.lang === selectedLang) {
+                    el.classList.remove('d-none'); // Show selected
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
